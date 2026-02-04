@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>Gestión de Usuarios</h1>
+
+    <div class="login">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <div id="loginMessage"></div>
+    </div>
+
+    <div class="register">
+        <h2>Registrar Usuario</h2>
+        <form id="userForm">
+            <input type="text" id="name" placeholder="Nombre" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Registrar</button>
+        </form>
+        <div id="registerMessage"></div>
+    </div>
+    <h2>Lista de Usuarios</h2>
+    <button id="loadUsers">Cargar Usuarios</button>
+    <ul id="userList"></ul>
+    <div id="userMessage"></div>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
