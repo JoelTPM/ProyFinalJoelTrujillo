@@ -6,7 +6,6 @@ export async function eliminarEstudiante(id) {
         'Content-Type': 'application/json'
       }
     });
-
     if (!response.ok) {
       throw new Error(`Error: ${response.status} - ${response.statusText}`);
     }
@@ -18,5 +17,4 @@ export async function eliminarEstudiante(id) {
     return { success: false, error: error.message };
   }
 }
-
 export default eliminarEstudiante;
