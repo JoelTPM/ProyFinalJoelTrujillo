@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { agregarEstudiante } from '../src/agregarEstudiante.js';
-import { leerTodosLosEstudiantes, leerEstudiantePorId } from '../src/leerEstudiante.js';
+import { leerTodosLosEstudiantes } from '../src/leerEstudiante.js';
 import { actualizarEstudiante } from '../src/actualizarEstudiante.js';
 import { eliminarEstudiante } from '../src/eliminarEstudiante.js';
 

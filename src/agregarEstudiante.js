@@ -1,5 +1,4 @@
 const API_URL = 'http://localhost:3000/api';
-
 /**
  * Agrega un nuevo estudiante a la base de datos
  * @param {Object} datosEstudiante - Datos del estudiante a agregar
@@ -14,7 +13,6 @@ export async function agregarEstudiante(datosEstudiante) {
     if (!datosEstudiante || Object.keys(datosEstudiante).length === 0) {
       throw new Error('Los datos del estudiante no pueden estar vacíos');
     }
-
     const response = await fetch(`${API_URL}/student`, {
       method: 'POST',
       headers: {
@@ -22,11 +20,9 @@ export async function agregarEstudiante(datosEstudiante) {
       },
       body: JSON.stringify(datosEstudiante)
     });
-
     if (!response.ok) {
       throw new Error(`Error: ${response.status} - ${response.statusText}`);
     }
-
     const nuevoEstudiante = await response.json();
     console.log('✓ Estudiante agregado exitosamente:', nuevoEstudiante);
     return { success: true, data: nuevoEstudiante };
