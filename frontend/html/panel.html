@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANEL</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h1>PANEL DE ESTUDIANTES</h1>
+    <div class="menu_de_opciones">
+        <h2>Menú de Opciones del usuario</h2>
+        <button id="eliminarEstudiantes">Eliminar Usuario</button>
+        <button id="actualizarUsuario">Actualizar Usuario</button>
+        <button id="cerrarSesion">Cerrar Sesión</button>
+    </div>
+    <div id="updateUserForm" style="display: none;">
+        <form id="userUpdateForm">
+            <input id="updateUserName" type="text" placeholder="Nuevo nombre">
+            <input id="updateUserEmail" type="email" placeholder="Nuevo email">
+            <input id="updateUserPassword" type="password" placeholder="Nueva contraseña">
+            <button type="submit">Actualizar Usuario</button>
+            <button type="button" id="cancelUpdateUser">Cancelar</button>
+        </form>
+    </div>
+    <div class="estudiantes">
+        <h2>CRUD Estudiantes</h2>
+        <form id="studentForm">
+            <input id="studentName" type="text" placeholder="Nombre del estudiante">
+            <input id="studentAge" type="number" placeholder="Edad">
+            <input id="studentGrade" type="text" placeholder="Curso">
+            <input id="studentQualification" type="number" step="0.1" placeholder="Calificación">
+            <button type="submit" id="AgregarEstudiantes">Agregar Estudiante</button>
+        </form>
+        <form id="studentUpdateForm">
+            <input id="updateStudentId" type="number" placeholder="ID del estudiante">
+            <input id="updateStudentName" type="text" placeholder="Nuevo nombre">
+            <input id="updateStudentAge" type="number" placeholder="Nueva edad">
+            <input id="updateStudentGrade" type="text" placeholder="Nuevo curso">
+            <input id="updateStudentQualification" type="number" step="0.1" placeholder="Nueva calificación">
+            <button type="submit" id="ActualizarEstudiantes">Actualizar Estudiante</button>
+        </form>
+        <form id="studentDeleteForm">
+            <input id="deleteStudentId" type="number" placeholder="ID del estudiante a eliminar">
+            <button type="submit" id="EliminarEstudiante">Eliminar Estudiante</button>
+        </form>
+        <form id="studentSearchForm">
+            <input id="searchStudentId" type="number" placeholder="ID del estudiante a buscar">
+            <button type="submit" id="BuscarEstudiante">Buscar Estudiante</button>
+        </form>
+    </div>
+    <h2>Lista de Estudiantes</h2>
+    <button id="loadStudent">Cargar Estudiantes</button>
+    <ul id="studentList"></ul>
+    <div id="studentMessage"></div>
+    <script src="../js/panel.js"></script>
+</body>
+</html>
